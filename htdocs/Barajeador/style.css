@@ -1,0 +1,68 @@
+/* Estilos generales */
+body {
+    font-family: 'IBM', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Color de fondo */
+    color: #333; /* Color de texto principal */
+}
+
+header {
+    background-color: #1a237e; /* Color de fondo del encabezado */
+    color: #fff; /* Color de texto del encabezado */
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 150px;
+    background-color: #1a237e; /* Color de fondo de las cartas */
+    color: #fff; /* Color de texto de las cartas */
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1a237e; /* Color de fondo del botón */
+    color: #fff; /* Color de texto del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0d47a1; /* Cambio de color al pasar el ratón por encima */
+}
+
+footer {
+    background-color: #1a237e; /* Color de fondo del pie de página */
+    color: #fff; /* Color de texto del pie de página */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
