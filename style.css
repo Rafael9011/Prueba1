@@ -1,0 +1,82 @@
+/* Estilos generales */
+body {
+    font-family: 'IBM', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Color de fondo */
+    color: #333; /* Color de texto principal */
+}
+
+header {
+    background-color: #1a237e; /* Color de fondo del encabezado */
+    color: #fff; /* Color de texto del encabezado */
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff; /* Color de los enlaces del menú */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+    color: #1a237e; /* Color de los encabezados */
+}
+
+/* Estilos específicos */
+.proyecto {
+    background-color: #fff; /* Color de fondo de cada proyecto */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px;
+}
+
+.proyecto h3 {
+    color: #1a237e; /* Color del título del proyecto */
+}
+
+.proyecto p {
+    color: #555; /* Color del texto de descripción del proyecto */
+}
+
+.proyecto a {
+    color: #1a237e; /* Color del enlace "Ver Proyecto" */
+    text-decoration: none;
+}
+
+.proyecto a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #1a237e; /* Color de fondo del pie de página */
+    color: #fff; /* Color de texto del pie de página */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
