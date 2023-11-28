@@ -7,6 +7,47 @@ body {
     color: #333; /* Color de texto principal */
 }
 
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loader-text {
+    color: #00bcd4; /* Color azul brillante */
+    font-size: 24px;
+}
+
+/* Estilo inspirado en TRON: LEGACY */
+.loader::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #00bcd4, #000);
+    z-index: -1;
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
 header {
     background-color: #1a237e; /* Color de fondo del encabezado */
     color: #fff; /* Color de texto del encabezado */
