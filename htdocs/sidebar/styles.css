@@ -184,7 +184,7 @@ Asegúrate de ajustar la lógica de búsqueda según tus necesidades específica
 }
 
 .sidebar-right {
-    width: 1300px;
+    width: auto;
 }
 
 .content-section {
