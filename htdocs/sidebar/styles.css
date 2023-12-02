@@ -1,0 +1,293 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #333; /* Color del texto principal */
+    background-color: #f4f4f4; /* Color de fondo */
+}
+
+header {
+    background-color: #7eaaaf; /* Color de fondo del encabezado 66bdc7, 90f4ff, 3399ff, 008290, 00181a, b7f8ff */
+    color: #fff; /* Color del texto del encabezado */
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Estilos para el botón de alternancia del menú */
+.menu-toggle {
+    display: block;
+    background-color: #1a75ff; /* Color de fondo del botón */
+    color: #fff; /* Color de texto del botón */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 10px; /* Espaciado exterior */
+}
+
+.menu-toggle:hover {
+    background-color: #00df86; /* Cambio de color al pasar el ratón */
+}
+
+/* Estilos para el menú vertical */
+.menu {
+    background-color: #000a1a; /* Color de fondo del menú */
+    width: 200px; /* Ancho del menú */
+    height: 100vh; /* Altura del menú que ocupa toda la altura */
+    position: fixed;
+    left: -200px; /* Oculta el menú al principio */
+    top: 0;
+    transition: left 0.3s ease; /* Transición de desplazamiento */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu.active {
+    left: 0; /* Muestra el menú al agregar la clase 'active' - buscar esta clase */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    padding: 15px 0;
+    border-bottom: 1px solid #0d47a1; /* Separador entre elementos del menú */
+}
+
+.menu ul li:last-child {
+    border-bottom: none; /* Elimina el borde inferior del último elemento */
+}
+
+.menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff; /* Color de texto del menú */
+    padding: 5px 20px;
+    transition: background-color 0.3s ease; /* Transición al pasar el ratón */
+}
+
+.menu ul li a:hover {
+    background-color: #0d47a1; /* Cambio de color al pasar el ratón */
+}
+
+
+main {
+    display: flex; /* ---- visualización de las divisiones*/
+    margin-left: 90px;
+    padding: 20px;
+}
+
+.sidebar {
+  box-sizing: border-box;
+}
+
+.search-form {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-form h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.search-form input[type="text"] {
+    width: calc(100% - 80px);
+    padding: 8px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.menu-form button{
+  background-color: #3399ff;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.search-form button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #00df86; /* Cambio de color al pasar el ratón */
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #1a75ff;
+}
+
+
+/* Estilos para el cursor personalizado */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3399ff;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.15s ease;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 9999;
+}
+
+/* Estilos para la animación del cursor */
+.custom-cursor.active {
+    transform: translate(-50%, -50%) scale(1);
+    animation: cursorPulse 1.2s infinite;
+}
+
+@keyframes cursorPulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Estos cambios añaden un cursor personalizado que sigue el movimiento del ratón
+y también captura eventos de clic en el formulario de búsqueda.
+El efecto de animación se logra con CSS,
+y la lógica de búsqueda puede ser implementada dentro del
+evento submit del formulario.
+Asegúrate de ajustar la lógica de búsqueda según tus necesidades específicas. */
+
+
+.sidebar-left, .sidebar-right {
+    width: 200px;
+    background-color: #f0f0f0; /* Color de fondo de las barras laterales */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-left {
+    width: 250px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-left: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.sidebar-right {
+    width: 1300px;
+}
+
+.content-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff; /* Color de fondo de las secciones de contenido */
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.sidebar-left {
+  width: 250px;
+  border-right: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+
+}
+
+.sidebar-left nav ul, .sidebar-right ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-left nav ul li, .sidebar-right ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para enlaces */
+a {
+    text-decoration: none;
+    color: #3399ff; /* Color de los enlaces */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*
+Estos estilos proporcionan una base simple para las secciones,
+las barras laterales y los enlaces, utilizando una paleta de colores azules
+para resaltar.
+Puedes personalizar aún más estos estilos para adaptarlos a las necesidades
+específicas de tu sitio web de almacén de medicamentos.
+Además, siéntete libre de agregar imágenes, formularios de búsqueda
+u otros elementos según sea necesario en cada sección.
+ */
+
+ /* Estilos específicos */
+ .opciones {
+     background-color: #fff; /* Color de fondo de cada proyecto */
+     padding: 20px;
+     border-radius: 5px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+     margin-bottom: 20px;
+ }
+
+ .opciones h3 {
+     color: #1a237e; /* Color del título del proyecto */
+ }
+
+ .opciones p {
+     color: #555; /* Color del texto de descripción del proyecto */
+ }
+
+ .opciones a {
+     color: #1a237e; /* Color del enlace "Ver Proyecto" */
+     text-decoration: none;
+ }
+
+ .opciones a:hover {
+     text-decoration: underline;
+ }
+
+.submenus {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.submenus:hover{
+  background-color: #f0f0f0;
+}
+
+.submenus.selected {
+    background-color: #e0e0e0;
+}
+
+.submenus-content {
+    display: flex;
+}
+
+
+footer {
+    background-color: #000a1a; /* Color de fondo del pie de página 3399ff */
+    color: #fff; /* Color de texto del pie de página */
+    text-align: center;
+    padding: 1px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
