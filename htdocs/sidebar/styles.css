@@ -11,6 +11,7 @@ header {
     color: #fff; /* Color del texto del encabezado */
     text-align: center;
     padding: 20px;
+    position: fixed;
 }
 
 
@@ -184,7 +185,7 @@ Asegúrate de ajustar la lógica de búsqueda según tus necesidades específica
 }
 
 .sidebar-right {
-    width: 1700px;
+    width: 1920px;
 }
 
 .content-section {
